@@ -69,8 +69,8 @@ export default async function EPK() {
       {/* ── ABOUT ── */}
       <section id="bio" className="px-6 md:px-12 py-10 border-b border-[#D8D4CE]">
         <p className="text-[10px] uppercase tracking-widest font-semibold mb-6" style={{ color: "#a08060" }}>About</p>
-        <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-10 items-start">
-          <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden">
+        <div className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-10 items-stretch">
+          <div className="relative w-full min-h-[200px] rounded-lg overflow-hidden">
             <Image src="/bio-photo.jpg" alt="Michael Cantor" fill className="object-cover object-top" />
           </div>
           <div className="space-y-3 text-[13px] leading-relaxed" style={{ color: "#8B6B4A" }}>
@@ -91,7 +91,7 @@ export default async function EPK() {
             <iframe
               src="https://open.spotify.com/embed/artist/2nyS5xoo0whI3q74gsRmHL?utm_source=generator&theme=0"
               width="100%"
-              height="232"
+              height="352"
               style={{ borderRadius: 8 }}
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
@@ -116,7 +116,7 @@ export default async function EPK() {
           <div className="grid grid-cols-2 gap-2.5">
             {videos.map((video) => (
               <a key={video.id} href={video.url} target="_blank" rel="noopener noreferrer" className="group">
-                <div className="relative aspect-video rounded-md overflow-hidden bg-[#D8D4CE]">
+                <div className="relative aspect-[4/3] rounded-md overflow-hidden bg-[#D8D4CE]">
                   <img
                     src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
                     alt={video.title}
