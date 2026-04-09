@@ -35,10 +35,12 @@ function FloatingLabel({
   label,
   onClick,
   style,
+  large = false,
 }: {
   label: string;
   onClick: () => void;
   style: React.CSSProperties;
+  large?: boolean;
 }) {
   return (
     <button
@@ -47,13 +49,13 @@ function FloatingLabel({
       style={style}
     >
       <span
-        className="text-sm md:text-base font-bold drop-shadow-sm group-hover:opacity-70 transition-opacity"
+        className={`${large ? "text-lg md:text-xl" : "text-sm md:text-base"} font-bold drop-shadow-sm group-hover:opacity-70 transition-opacity`}
         style={{ color: "#8B6B4A" }}
       >
         {label}
       </span>
       <span
-        className="w-5 h-5 rounded-full border flex items-center justify-center text-xs font-light shrink-0 group-hover:opacity-70 transition-opacity"
+        className={`${large ? "w-7 h-7 text-sm" : "w-5 h-5 text-xs"} rounded-full border flex items-center justify-center font-light shrink-0 group-hover:opacity-70 transition-opacity`}
         style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.5)" }}
       >
         +
@@ -72,11 +74,12 @@ export default function EPKOverlay({ videos, accent }: Props) {
       {/* ── FLOATING LABELS ── */}
 
 
-      {/* Live Performances — bottom center-left */}
+      {/* Live Performances — right side */}
       <FloatingLabel
         label="Live Performances"
         onClick={() => setOpen("live")}
-        style={{ bottom: "20%", left: "6%" }}
+        style={{ bottom: "28%", right: "6%" }}
+        large
       />
 
       {/* Press Photos — bottom right */}
