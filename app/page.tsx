@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { getLatestReleases } from "@/lib/spotify";
 import { extractPalette } from "@/lib/colors";
-import EPKSections from "./components/EPKSections";
+import EPKOverlay from "./components/EPKOverlay";
 
 export default async function EPK() {
   const [releases] = await Promise.all([getLatestReleases(1)]);
@@ -22,7 +22,7 @@ export default async function EPK() {
   return (
     <main className="h-screen overflow-hidden relative" style={{ color: "#8B6B4A" }}>
 
-      {/* Hero image — full screen, always visible */}
+      {/* Hero image */}
       <Image
         src="/press-photo.jpg"
         alt="Michael Cantor"
@@ -32,71 +32,56 @@ export default async function EPK() {
         style={{ filter: "brightness(0.88)" }}
       />
 
-      {/* Gradient — fades image into readable area at bottom */}
+      {/* Subtle vignette for readability at edges */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          background: "linear-gradient(to top, rgba(245,242,237,0.95) 0%, rgba(245,242,237,0.4) 45%, transparent 70%)",
+          background: "radial-gradient(ellipse at center, transparent 40%, rgba(245,242,237,0.35) 100%)",
         }}
       />
 
-      {/* All content layered over the image */}
-      <div className="absolute inset-0 flex flex-col">
-
-        {/* Nav */}
-        <nav className="flex items-center justify-center px-6 py-5 shrink-0">
-          <div className="flex gap-6 md:gap-10 text-sm md:text-base font-bold drop-shadow-sm" style={{ color: "#8B6B4A" }}>
-            {[
-              { label: "Bio", id: "bio" },
-              { label: "Music", id: "music" },
-              { label: "Live", id: "live" },
-              { label: "Photos", id: "photos" },
-              { label: "Contact", id: "contact" },
-            ].map((link) => (
-              <a key={link.label} href={`#${link.id}`} className="hover:opacity-70 transition-opacity">
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </nav>
-
-        {/* Name — centered in upper portion */}
-        <div className="flex-1 flex flex-col items-center justify-center">
-          <h1
-            className="fade-up fade-up-2 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none text-center mb-3 drop-shadow-sm"
-            style={{ color: "#8B6B4A" }}
-          >
-            Michael Cantor
-          </h1>
-          <p className="fade-up fade-up-3 text-sm md:text-base font-medium" style={{ color: "#8B6B4A" }}>
-            Singer-Songwriter · New York, NY
-          </p>
-          <div className="flex gap-3 mt-4">
-            {[
-              { label: "Instagram", href: "https://www.instagram.com/michaelrcantor" },
-              { label: "TikTok", href: "https://www.tiktok.com/@michaelrcantor" },
-              { label: "YouTube", href: "https://youtube.com/@michaelcantor3" },
-            ].map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.6)" }}
-                className="px-4 py-1.5 rounded-full border text-xs font-semibold hover:opacity-80 transition"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+      {/* Name + info — top area, higher up */}
+      <div className="absolute top-10 left-0 right-0 flex flex-col items-center text-center px-4">
+        <h1
+          className="fade-up fade-up-2 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none drop-shadow-sm mb-2"
+          style={{ color: "#8B6B4A" }}
+        >
+          Michael Cantor
+        </h1>
+        <p className="fade-up fade-up-3 text-sm font-medium mb-1" style={{ color: "#8B6B4A" }}>
+          Singer-Songwriter · New York, NY
+        </p>
+        <div className="fade-up fade-up-3 flex flex-col items-center gap-0.5 mb-3" style={{ color: "#a08060" }}>
+          <a href="mailto:Michael.r.cantor@gmail.com" className="text-xs hover:opacity-70 transition-opacity">
+            Michael.r.cantor@gmail.com
+          </a>
+          <a href="tel:2032167905" className="text-xs hover:opacity-70 transition-opacity">
+            (203) 216-7905
+          </a>
         </div>
-
-        {/* Collapsible sections — bottom portion, scrollable, directly on hero */}
-        <div className="overflow-y-auto shrink-0 max-h-[48vh]">
-          <EPKSections videos={videos} accent={accent} />
+        <div className="flex gap-3">
+          {[
+            { label: "Instagram", href: "https://www.instagram.com/michaelrcantor" },
+            { label: "TikTok", href: "https://www.tiktok.com/@michaelrcantor" },
+            { label: "YouTube", href: "https://youtube.com/@michaelcantor3" },
+          ].map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.55)" }}
+              className="px-4 py-1.5 rounded-full border text-xs font-semibold hover:opacity-80 transition"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
-
       </div>
+
+      {/* Floating labels + modals */}
+      <EPKOverlay videos={videos} accent={accent} />
+
     </main>
   );
 }
