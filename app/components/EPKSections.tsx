@@ -173,7 +173,7 @@ export default function EPKSections({ videos, accent }: Props) {
       style={{ "--accent": accent } as React.CSSProperties}
     >
       {/* Streaming buttons */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+      <div id="music" className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
         {[
           { label: "Spotify", href: "https://open.spotify.com/artist/2nyS5xoo0whI3q74gsRmHL", bg: "#1DB954", text: "text-black" },
           { label: "Apple Music", href: "https://music.apple.com/us/artist/michael-cantor/1631765548", bg: "#fc3c44", text: "text-white" },
@@ -193,7 +193,7 @@ export default function EPKSections({ videos, accent }: Props) {
         ))}
       </div>
 
-      <CollapsibleSection title="Bio" defaultOpen={false}>
+      <div id="bio" /><CollapsibleSection title="Bio" defaultOpen={false}>
         <div className="space-y-4 text-[14px] leading-relaxed" style={{ color: "#8B6B4A" }}>
           <p>Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car on their drives back and forth from Yonkers, NY, where Michael was born. They would listen to ELO, Radiohead, and the Allman Brothers on repeat. Those were his earliest influences. He later fell in love with Stevie Ray Vaughan and became obsessed with the guitar.</p>
           <p>Years later, Michael found himself writing songs and starting to sing. He found that writing songs made him happy and decided to go to Berklee School of Music. There, his musical influences became songwriters like Bob Dylan, Leif Vollebekk, and John Mayer. Michael says he likes how a song feels in his hands. He knows if his hands are on the same page, he's onto a new song.</p>
@@ -201,15 +201,15 @@ export default function EPKSections({ videos, accent }: Props) {
         </div>
       </CollapsibleSection>
 
-      <CollapsibleSection title="Live Performances" defaultOpen={false}>
+      <div id="live" /><CollapsibleSection title="Live Performances" defaultOpen={false}>
         <VideoGrid videos={videos} />
       </CollapsibleSection>
 
-      <CollapsibleSection title="Press Photos" defaultOpen={false}>
+      <div id="photos" /><CollapsibleSection title="Press Photos" defaultOpen={false}>
         <PhotoLightbox photos={["/press-photo.jpg", "/bio-photo.jpg"]} />
       </CollapsibleSection>
 
-      <CollapsibleSection title="Get in Touch" defaultOpen={false}>
+      <div id="contact" /><CollapsibleSection title="Get in Touch" defaultOpen={false}>
         <div className="flex flex-col gap-3">
           <a
             href="mailto:Michael.r.cantor@gmail.com"
