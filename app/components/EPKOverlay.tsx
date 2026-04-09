@@ -74,19 +74,19 @@ export default function EPKOverlay({ videos, accent }: Props) {
       {/* ── FLOATING LABELS ── */}
 
 
-      {/* Live Performances — right side */}
-      <FloatingLabel
-        label="Live Performances"
-        onClick={() => setOpen("live")}
-        style={{ bottom: "28%", right: "6%" }}
-        large
-      />
-
-      {/* Press Photos — bottom right */}
+      {/* Press Photos — right, mirroring bio */}
       <FloatingLabel
         label="Press Photos"
         onClick={() => setOpen("photos")}
-        style={{ bottom: "32%", right: "6%" }}
+        style={{ top: "38%", right: "6%" }}
+        large
+      />
+
+      {/* Live Performances — right, below Press Photos */}
+      <FloatingLabel
+        label="Live Performances"
+        onClick={() => setOpen("live")}
+        style={{ top: "48%", right: "6%" }}
         large
       />
 
