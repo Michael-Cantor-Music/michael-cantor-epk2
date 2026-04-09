@@ -26,7 +26,7 @@ function CollapsibleSection({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="border-t border-[#D8D4CE]">
+    <div className="border-t border-[#C8C4BE]">
       <button
         onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between py-4 px-0 text-left hover:opacity-70 transition-opacity"
@@ -169,7 +169,7 @@ function VideoGrid({ videos }: { videos: Video[] }) {
 export default function EPKSections({ videos, accent }: Props) {
   return (
     <div
-      className="max-w-2xl mx-auto px-6 py-8"
+      className="max-w-2xl mx-auto px-6 pb-6 pt-2"
       style={{ "--accent": accent } as React.CSSProperties}
     >
       {/* Streaming buttons */}
