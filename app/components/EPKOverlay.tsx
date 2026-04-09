@@ -103,7 +103,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
             href={p.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-3 py-1.5 rounded-full text-xs font-semibold hover:opacity-85 transition"
+            className="px-5 py-2 rounded-full text-xs font-semibold hover:opacity-85 transition whitespace-nowrap"
             style={{ backgroundColor: p.bg, color: p.text }}
           >
             {p.label}
