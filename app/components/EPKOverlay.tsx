@@ -153,7 +153,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
         <Modal onClose={() => setOpen(null)}>
           <h2 className="text-xl font-bold mb-4" style={{ color: "#8B6B4A" }}>Press Photos</h2>
           <div className="grid grid-cols-2 gap-3">
-            {["/press-photo.jpg", "/bio-photo.jpg"].map((src, i) => (
+            {["/thisone1.jpg", "/thisone2.jpg", "/thisone3.jpg", "/thisone4.jpg"].map((src, i) => (
               <button
                 key={i}
                 onClick={() => setLightboxPhoto(src)}
