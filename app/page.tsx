@@ -77,10 +77,10 @@ export default async function EPK() {
           Singer-Songwriter · New York, NY
         </p>
         <div className="fade-up fade-up-3 flex flex-col items-center" style={{ gap: "4px", marginBottom: "20px" }}>
-          <a href="mailto:Michael.r.cantor@gmail.com" className="text-xs hover:opacity-70 transition-opacity" style={{ color: "#a08060" }}>
+          <a href="mailto:Michael.r.cantor@gmail.com" className="text-xs font-bold hover:opacity-70 transition-opacity" style={{ color: "#a08060" }}>
             Michael.r.cantor@gmail.com
           </a>
-          <a href="tel:2032167905" className="text-xs hover:opacity-70 transition-opacity" style={{ color: "#a08060" }}>
+          <a href="tel:2032167905" className="text-xs font-bold hover:opacity-70 transition-opacity" style={{ color: "#a08060" }}>
             (203) 216-7905
           </a>
         </div>
