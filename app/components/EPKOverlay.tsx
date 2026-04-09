@@ -74,6 +74,16 @@ export default function EPKOverlay({ videos, accent, heroBg }: Props) {
       {/* ── FLOATING LABELS ── */}
 
 
+      {/* Bio — mobile only */}
+      <div className="md:hidden">
+        <FloatingLabel
+          label="Bio"
+          onClick={() => setOpen("bio")}
+          style={{ top: "32%", left: "22%" }}
+          large
+        />
+      </div>
+
       {/* Press Photos — mirrors bio position on right side */}
       <FloatingLabel
         label="Press Photos"
@@ -117,6 +127,16 @@ export default function EPKOverlay({ videos, accent, heroBg }: Props) {
 
       {/* ── MODALS ── */}
 
+      {open === "bio" && (
+        <Modal onClose={() => setOpen(null)} bg={heroBg}>
+          <h2 className="text-xl font-bold mb-4" style={{ color: "#8B6B4A" }}>Bio</h2>
+          <div className="space-y-3 text-[14px] leading-relaxed font-semibold" style={{ color: "#8B6B4A" }}>
+            <p>Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car on their drives back and forth from Yonkers, NY, where Michael was born. They would listen to ELO, Radiohead, and The Allman Brothers on repeat. Those were his earliest influences.</p>
+            <p>After years of obsessing over the guitar, Michael found himself writing songs and starting to sing. His musical influences became songwriters like Bob Dylan, Leif Vollebekk, and John Mayer.</p>
+            <p>His debut single was released in 2023, and now he is very excited to be rolling out his debut album. It's a folk/pop record with some fusion sprinkled in. With each song, Michael says he's coming closer to hearing his true voice as an artist.</p>
+          </div>
+        </Modal>
+      )}
 
       {open === "live" && (
         <Modal onClose={() => setOpen(null)} bg={heroBg}>
