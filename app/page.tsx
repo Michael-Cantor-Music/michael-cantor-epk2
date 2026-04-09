@@ -60,14 +60,12 @@ export default async function EPK() {
         <p className="fade-up fade-up-3 text-sm font-medium mt-4 mb-4" style={{ color: "#8B6B4A" }}>
           Singer-Songwriter · New York, NY
         </p>
-        <div className="fade-up fade-up-3 flex flex-col items-center gap-3 mb-4" style={{ color: "#a08060" }}>
-          <a href="mailto:Michael.r.cantor@gmail.com" className="text-xs hover:opacity-70 transition-opacity">
-            Michael.r.cantor@gmail.com
-          </a>
-          <a href="tel:2032167905" className="text-xs hover:opacity-70 transition-opacity">
-            (203) 216-7905
-          </a>
-        </div>
+        <a href="mailto:Michael.r.cantor@gmail.com" className="fade-up fade-up-3 text-xs hover:opacity-70 transition-opacity mb-4 block" style={{ color: "#a08060" }}>
+          Michael.r.cantor@gmail.com
+        </a>
+        <a href="tel:2032167905" className="fade-up fade-up-3 text-xs hover:opacity-70 transition-opacity mb-4 block" style={{ color: "#a08060" }}>
+          (203) 216-7905
+        </a>
         <div className="flex gap-3">
           {[
             { label: "Instagram", href: "https://www.instagram.com/michaelrcantor" },
