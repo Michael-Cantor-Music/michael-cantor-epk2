@@ -15,6 +15,7 @@ export default async function EPK() {
     { id: "fO5vxJum4wA", title: "Levit Pavilion", url: "https://www.youtube.com/shorts/fO5vxJum4wA" },
     { id: "xa861fVGf7w", title: "Lucinda's", url: "https://www.youtube.com/shorts/xa861fVGf7w" },
     { id: "hG1z4toi0Vg", title: "SoHo Playhouse", url: "https://www.youtube.com/shorts/hG1z4toi0Vg" },
+    { id: "rj-BXD73hd0", title: "At Home", url: "https://www.youtube.com/shorts/rj-BXD73hd0" },
   ];
 
   return (
@@ -131,7 +132,7 @@ export default async function EPK() {
       <section id="live" className="py-20 md:py-28 px-6 md:px-16 max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-10">Live Performances</h2>
         {videos.length > 0 ? (
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {videos.map((video) => (
               <a key={video.id} href={video.url} target="_blank" rel="noopener noreferrer" className="group">
                 <div className="relative aspect-video rounded-xl overflow-hidden mb-3 bg-[#EDE9E3]">
