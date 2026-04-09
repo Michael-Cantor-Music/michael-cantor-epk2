@@ -41,7 +41,7 @@ export default async function EPK() {
       />
 
       {/* Bio — top left, always visible */}
-      <div className="absolute z-10 max-w-[200px]" style={{ top: "46%", left: "22%" }}>
+      <div className="absolute z-10 max-w-[200px]" style={{ top: "38%", left: "22%" }}>
         <p className="text-[11px] md:text-xs leading-relaxed drop-shadow-sm font-semibold" style={{ color: "#8B6B4A" }}>
           Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car listening to ELO, Radiohead, and the Allman Brothers. He later became obsessed with Stevie Ray Vaughan and the guitar.
         </p>
