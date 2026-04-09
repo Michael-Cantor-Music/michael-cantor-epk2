@@ -52,18 +52,18 @@ export default async function EPK() {
       {/* Name + info — top area, higher up */}
       <div className="absolute top-10 left-0 right-0 flex flex-col items-center text-center px-4">
         <h1
-          className="fade-up fade-up-2 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none drop-shadow-sm mb-2"
-          style={{ color: "#8B6B4A" }}
+          className="fade-up fade-up-2 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none drop-shadow-sm"
+          style={{ color: "#8B6B4A", marginBottom: "20px" }}
         >
           Michael Cantor
         </h1>
-        <p className="fade-up fade-up-3 text-sm font-medium mt-4 mb-4" style={{ color: "#8B6B4A" }}>
+        <p className="fade-up fade-up-3 text-sm font-medium" style={{ color: "#8B6B4A", marginBottom: "20px" }}>
           Singer-Songwriter · New York, NY
         </p>
-        <a href="mailto:Michael.r.cantor@gmail.com" className="fade-up fade-up-3 text-xs hover:opacity-70 transition-opacity mb-4 block" style={{ color: "#a08060" }}>
+        <a href="mailto:Michael.r.cantor@gmail.com" className="fade-up fade-up-3 text-xs hover:opacity-70 transition-opacity" style={{ color: "#a08060", marginBottom: "20px", display: "block" }}>
           Michael.r.cantor@gmail.com
         </a>
-        <a href="tel:2032167905" className="fade-up fade-up-3 text-xs hover:opacity-70 transition-opacity mb-4 block" style={{ color: "#a08060" }}>
+        <a href="tel:2032167905" className="fade-up fade-up-3 text-xs hover:opacity-70 transition-opacity" style={{ color: "#a08060", marginBottom: "20px", display: "block" }}>
           (203) 216-7905
         </a>
         <div className="flex gap-3">
