@@ -87,6 +87,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
         label="Press Photos"
         onClick={() => setOpen("photos")}
         style={{ bottom: "32%", right: "6%" }}
+        large
       />
 
 
