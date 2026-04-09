@@ -40,6 +40,16 @@ export default async function EPK() {
         }}
       />
 
+      {/* Bio — top left, always visible */}
+      <div className="absolute top-10 left-6 md:left-10 max-w-xs z-10">
+        <p className="text-[11px] md:text-xs leading-relaxed drop-shadow-sm" style={{ color: "#8B6B4A" }}>
+          Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car listening to ELO, Radiohead, and the Allman Brothers. He later became obsessed with Stevie Ray Vaughan and the guitar.
+        </p>
+        <p className="text-[11px] md:text-xs leading-relaxed mt-2 drop-shadow-sm" style={{ color: "#8B6B4A" }}>
+          After studying at Berklee School of Music, his songwriting influences grew to include Bob Dylan, Leif Vollebekk, and John Mayer. His debut album — a folk/pop record with fusion sprinkled in — is rolling out now.
+        </p>
+      </div>
+
       {/* Name + info — top area, higher up */}
       <div className="absolute top-10 left-0 right-0 flex flex-col items-center text-center px-4">
         <h1

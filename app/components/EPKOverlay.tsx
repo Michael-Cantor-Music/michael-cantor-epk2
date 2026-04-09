@@ -71,12 +71,6 @@ export default function EPKOverlay({ videos, accent }: Props) {
     <>
       {/* ── FLOATING LABELS ── */}
 
-      {/* Bio — left side */}
-      <FloatingLabel
-        label="Bio"
-        onClick={() => setOpen("bio")}
-        style={{ bottom: "32%", left: "6%" }}
-      />
 
       {/* Live Performances — bottom center-left */}
       <FloatingLabel
@@ -92,12 +86,6 @@ export default function EPKOverlay({ videos, accent }: Props) {
         style={{ bottom: "32%", right: "6%" }}
       />
 
-      {/* Get in Touch — bottom right lower */}
-      <FloatingLabel
-        label="Get in Touch"
-        onClick={() => setOpen("contact")}
-        style={{ bottom: "20%", right: "6%" }}
-      />
 
       {/* Streaming links — bottom center */}
       <div
@@ -125,16 +113,6 @@ export default function EPKOverlay({ videos, accent }: Props) {
 
       {/* ── MODALS ── */}
 
-      {open === "bio" && (
-        <Modal onClose={() => setOpen(null)}>
-          <h2 className="text-xl font-bold mb-4" style={{ color: "#8B6B4A" }}>Bio</h2>
-          <div className="space-y-4 text-[14px] leading-relaxed" style={{ color: "#8B6B4A" }}>
-            <p>Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car on their drives back and forth from Yonkers, NY, where Michael was born. They would listen to ELO, Radiohead, and the Allman Brothers on repeat. Those were his earliest influences. He later fell in love with Stevie Ray Vaughan and became obsessed with the guitar.</p>
-            <p>Years later, Michael found himself writing songs and starting to sing. He found that writing songs made him happy and decided to go to Berklee School of Music. There, his musical influences became songwriters like Bob Dylan, Leif Vollebekk, and John Mayer. Michael says he likes how a song feels in his hands. He knows if his hands are on the same page, he's onto a new song.</p>
-            <p>His debut single was released in 2023, and now he is very excited to be rolling out his debut album. It's a folk/pop record with some fusion sprinkled in. With each song, Michael says he's coming closer to hearing his true voice as an artist.</p>
-          </div>
-        </Modal>
-      )}
 
       {open === "live" && (
         <Modal onClose={() => setOpen(null)}>
@@ -187,37 +165,6 @@ export default function EPKOverlay({ videos, accent }: Props) {
         </Modal>
       )}
 
-      {open === "contact" && (
-        <Modal onClose={() => setOpen(null)}>
-          <h2 className="text-xl font-bold mb-4" style={{ color: "#8B6B4A" }}>Get in Touch</h2>
-          <div className="flex flex-col gap-3">
-            <a href="mailto:Michael.r.cantor@gmail.com"
-              className="flex items-center gap-3 border border-[#D8D4CE] rounded-xl p-4 hover:opacity-70 transition-opacity">
-              <div className="w-9 h-9 rounded-full bg-[#E8E4DE] flex items-center justify-center shrink-0" style={{ color: accent }}>
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                </svg>
-              </div>
-              <div className="min-w-0">
-                <p className="text-[10px] uppercase tracking-widest mb-0.5" style={{ color: "#a08060" }}>Email</p>
-                <p className="text-sm font-semibold truncate" style={{ color: "#8B6B4A" }}>Michael.r.cantor@gmail.com</p>
-              </div>
-            </a>
-            <a href="tel:2032167905"
-              className="flex items-center gap-3 border border-[#D8D4CE] rounded-xl p-4 hover:opacity-70 transition-opacity">
-              <div className="w-9 h-9 rounded-full bg-[#E8E4DE] flex items-center justify-center shrink-0" style={{ color: accent }}>
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                </svg>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-widest mb-0.5" style={{ color: "#a08060" }}>Phone</p>
-                <p className="text-sm font-semibold" style={{ color: "#8B6B4A" }}>(203) 216-7905</p>
-              </div>
-            </a>
-          </div>
-        </Modal>
-      )}
 
       {/* Video player modal */}
       {playingVideo && (
