@@ -12,6 +12,19 @@ export default async function EPK() {
     : { vibrant: "#c9b99a", darkVibrant: "#1a1a1a", muted: "#6a6460" };
   const accent = palette.vibrant;
 
+  // Lighten the vibrant color to match the hero page background (same formula as michael-cantor-site)
+  const hexToRgb = (hex: string) => {
+    const h = hex.replace("#", "");
+    return {
+      r: parseInt(h.slice(0, 2), 16),
+      g: parseInt(h.slice(2, 4), 16),
+      b: parseInt(h.slice(4, 6), 16),
+    };
+  };
+  const lighten = (c: number) => Math.round(c + (255 - c) * 0.65);
+  const { r, g, b } = hexToRgb(palette.vibrant);
+  const heroBg = `rgb(${lighten(r)}, ${lighten(g)}, ${lighten(b)})`;
+
   const videos = [
 { id: "xa861fVGf7w", title: "Lucinda's", url: "https://www.youtube.com/shorts/xa861fVGf7w" },
     { id: "hG1z4toi0Vg", title: "SoHo Playhouse", url: "https://www.youtube.com/shorts/hG1z4toi0Vg" },
@@ -39,8 +52,8 @@ export default async function EPK() {
         }}
       />
 
-      {/* Bio — top left, always visible */}
-      <div className="absolute z-10 max-w-[200px]" style={{ top: "50%", left: "22%", transform: "translateY(-50%)" }}>
+      {/* Bio — top left, hidden on mobile */}
+      <div className="absolute z-10 max-w-[200px] hidden md:block" style={{ top: "50%", left: "22%", transform: "translateY(-50%)" }}>
         <p className="text-[11px] md:text-xs leading-relaxed drop-shadow-sm font-semibold" style={{ color: "#8B6B4A" }}>
           Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car on their drives back and forth from Yonkers, NY, where Michael was born. They would listen to ELO, Radiohead, and The Allman Brothers on repeat. Those were his earliest influences.
         </p>
@@ -83,7 +96,7 @@ export default async function EPK() {
               target="_blank"
               rel="noopener noreferrer"
               style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.55)" }}
-              className="px-7 py-2.5 rounded-full border text-xs font-semibold hover:opacity-80 transition whitespace-nowrap"
+              className="px-8 py-3 rounded-full border text-sm font-semibold hover:opacity-80 transition whitespace-nowrap"
             >
               {link.label}
             </a>
@@ -92,7 +105,7 @@ export default async function EPK() {
       </div>
 
       {/* Floating labels + modals */}
-      <EPKOverlay videos={videos} accent={accent} />
+      <EPKOverlay videos={videos} accent={accent} heroBg={heroBg} />
 
     </main>
   );

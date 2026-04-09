@@ -4,9 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 interface Video { id: string; title: string; url: string; }
-interface Props { videos: Video[]; accent: string; }
+interface Props { videos: Video[]; accent: string; heroBg: string; }
 
-function Modal({ onClose, children }: { onClose: () => void; children: React.ReactNode }) {
+function Modal({ onClose, children, bg }: { onClose: () => void; children: React.ReactNode; bg: string }) {
   return (
     <div
       className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-4 md:p-8"
@@ -15,7 +15,7 @@ function Modal({ onClose, children }: { onClose: () => void; children: React.Rea
     >
       <div
         className="w-full max-w-2xl rounded-2xl p-6 md:p-8 max-h-[80vh] overflow-y-auto"
-        style={{ backgroundColor: "rgba(245,242,237,0.97)" }}
+        style={{ backgroundColor: bg }}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -64,7 +64,7 @@ function FloatingLabel({
   );
 }
 
-export default function EPKOverlay({ videos, accent }: Props) {
+export default function EPKOverlay({ videos, accent, heroBg }: Props) {
   const [open, setOpen] = useState<string | null>(null);
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
   const [lightboxPhoto, setLightboxPhoto] = useState<string | null>(null);
@@ -78,7 +78,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
       <FloatingLabel
         label="Press Photos"
         onClick={() => setOpen("photos")}
-        style={{ top: "48%", right: "31%" }}
+        style={{ top: "32%", right: "22%" }}
         large
       />
 
@@ -86,7 +86,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
       <FloatingLabel
         label="Live Performances"
         onClick={() => setOpen("live")}
-        style={{ top: "58%", right: "31%" }}
+        style={{ top: "42%", right: "22%" }}
         large
       />
 
@@ -107,7 +107,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
             href={p.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2.5 rounded-full border text-xs font-semibold hover:opacity-80 transition whitespace-nowrap"
+            className="px-8 py-3 rounded-full border text-sm font-semibold hover:opacity-80 transition whitespace-nowrap"
             style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.55)" }}
           >
             {p.label}
@@ -119,7 +119,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
 
 
       {open === "live" && (
-        <Modal onClose={() => setOpen(null)}>
+        <Modal onClose={() => setOpen(null)} bg={heroBg}>
           <h2 className="text-xl font-bold mb-4" style={{ color: "#8B6B4A" }}>Live Performances</h2>
           <div className="grid grid-cols-2 gap-3">
             {videos.map((video) => (
@@ -150,7 +150,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
       )}
 
       {open === "photos" && (
-        <Modal onClose={() => setOpen(null)}>
+        <Modal onClose={() => setOpen(null)} bg={heroBg}>
           <h2 className="text-xl font-bold mb-4" style={{ color: "#8B6B4A" }}>Press Photos</h2>
           <div className="grid grid-cols-2 gap-3">
             {["/thisone1.jpg", "/thisone2.jpg", "/thisone3.jpg", "/thisone4.jpg"].map((src, i) => (
