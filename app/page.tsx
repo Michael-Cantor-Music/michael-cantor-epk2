@@ -42,10 +42,13 @@ export default async function EPK() {
       {/* Bio — top left, always visible */}
       <div className="absolute z-10 max-w-[200px]" style={{ top: "38%", left: "22%" }}>
         <p className="text-[11px] md:text-xs leading-relaxed drop-shadow-sm font-semibold" style={{ color: "#8B6B4A" }}>
-          Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car listening to ELO, Radiohead, and the Allman Brothers. He later became obsessed with Stevie Ray Vaughan and the guitar.
+          Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car on their drives back and forth from Yonkers, NY, where Michael was born. They would listen to ELO, Radiohead, and The Allman Brothers on repeat. Those were his earliest influences.
         </p>
         <p className="text-[11px] md:text-xs leading-relaxed mt-2 drop-shadow-sm font-semibold" style={{ color: "#8B6B4A" }}>
-          After studying at Berklee School of Music, his songwriting influences grew to include Bob Dylan, Leif Vollebekk, and John Mayer. His debut album — a folk/pop record with fusion sprinkled in — is rolling out now.
+          After years of obsessing over the guitar, Michael found himself writing songs and starting to sing. His musical influences became songwriters like Bob Dylan, Leif Vollebekk, and John Mayer.
+        </p>
+        <p className="text-[11px] md:text-xs leading-relaxed mt-2 drop-shadow-sm font-semibold" style={{ color: "#8B6B4A" }}>
+          His debut single was released in 2023, and now he is very excited to be rolling out his debut album. It's a folk/pop record with some fusion sprinkled in. With each song, Michael says he's coming closer to hearing his true voice as an artist.
         </p>
       </div>
 
