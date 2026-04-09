@@ -86,16 +86,16 @@ export default async function EPK() {
         </div>
         <div className="flex gap-3">
           {[
-            { label: "Instagram", href: "https://www.instagram.com/michaelrcantor" },
-            { label: "TikTok", href: "https://www.tiktok.com/@michaelrcantor" },
-            { label: "YouTube", href: "https://youtube.com/@michaelcantor3" },
+            { label: "Instagram", href: "https://www.instagram.com/michaelrcantor", color: "#E1306C" },
+            { label: "TikTok", href: "https://www.tiktok.com/@michaelrcantor", color: "#010101" },
+            { label: "YouTube", href: "https://youtube.com/@michaelcantor3", color: "#FF0000" },
           ].map((link) => (
             <a
               key={link.label}
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.55)" }}
+              style={{ borderColor: link.color, color: link.color, backgroundColor: "rgba(255,255,255,0.55)" }}
               className="px-8 py-3 rounded-full border text-sm font-semibold hover:opacity-80 transition whitespace-nowrap"
             >
               {link.label}

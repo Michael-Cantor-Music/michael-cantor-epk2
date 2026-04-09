@@ -119,10 +119,10 @@ export default function EPKOverlay({ videos, accent, heroBg }: Props) {
         style={{ bottom: "6%", left: "50%", transform: "translateX(-50%)" }}
       >
         {[
-          { label: "Spotify", href: "https://open.spotify.com/artist/2nyS5xoo0whI3q74gsRmHL" },
-          { label: "Apple Music", href: "https://music.apple.com/us/artist/michael-cantor/1631765548" },
-          { label: "YouTube Music", href: "https://youtube.com/channel/UCHLDDkR-qNPVgtFQFGk4aDw" },
-          { label: "Tidal", href: "https://tidal.com/artist/32899611/u" },
+          { label: "Spotify", href: "https://open.spotify.com/artist/2nyS5xoo0whI3q74gsRmHL", color: "#1DB954" },
+          { label: "Apple Music", href: "https://music.apple.com/us/artist/michael-cantor/1631765548", color: "#FC3C44" },
+          { label: "YouTube Music", href: "https://youtube.com/channel/UCHLDDkR-qNPVgtFQFGk4aDw", color: "#FF0000" },
+          { label: "Tidal", href: "https://tidal.com/artist/32899611/u", color: "#000000" },
         ].map((p) => (
           <a
             key={p.label}
@@ -130,7 +130,7 @@ export default function EPKOverlay({ videos, accent, heroBg }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3 rounded-full border text-sm font-semibold hover:opacity-80 transition whitespace-nowrap"
-            style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.55)" }}
+            style={{ borderColor: p.color, color: p.color, backgroundColor: "rgba(255,255,255,0.55)" }}
           >
             {p.label}
           </a>
