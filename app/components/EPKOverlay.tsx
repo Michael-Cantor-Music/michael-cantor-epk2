@@ -92,13 +92,25 @@ export default function EPKOverlay({ videos, accent, heroBg }: Props) {
         large
       />
 
-      {/* Live Performances — below Press Photos, mirrors bio second paragraph */}
-      <FloatingLabel
-        label="Live Performances"
-        onClick={() => setOpen("live")}
-        style={{ top: "42%", right: "22%" }}
-        large
-      />
+      {/* Live Performances — desktop only at original position */}
+      <div className="hidden md:block">
+        <FloatingLabel
+          label="Live Performances"
+          onClick={() => setOpen("live")}
+          style={{ top: "42%", right: "22%" }}
+          large
+        />
+      </div>
+
+      {/* Live Performances — mobile only, below foot, above streaming links */}
+      <div className="md:hidden">
+        <FloatingLabel
+          label="Live Performances"
+          onClick={() => setOpen("live")}
+          style={{ bottom: "18%", left: "50%", transform: "translateX(-50%)" }}
+          large
+        />
+      </div>
 
 
       {/* Streaming links — bottom center */}
