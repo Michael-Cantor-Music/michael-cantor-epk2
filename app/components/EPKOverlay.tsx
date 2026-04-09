@@ -78,7 +78,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
       <FloatingLabel
         label="Press Photos"
         onClick={() => setOpen("photos")}
-        style={{ top: "38%", right: "22%", transform: "translateX(100%)" }}
+        style={{ top: "48%", right: "8%" }}
         large
       />
 
@@ -86,7 +86,7 @@ export default function EPKOverlay({ videos, accent }: Props) {
       <FloatingLabel
         label="Live Performances"
         onClick={() => setOpen("live")}
-        style={{ top: "48%", right: "22%", transform: "translateX(100%)" }}
+        style={{ top: "58%", right: "8%" }}
         large
       />
 
