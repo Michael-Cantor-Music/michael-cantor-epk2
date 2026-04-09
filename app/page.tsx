@@ -58,10 +58,10 @@ export default async function EPK() {
         >
           Michael Cantor
         </h1>
-        <p className="fade-up fade-up-3 text-sm font-medium mb-1" style={{ color: "#8B6B4A" }}>
+        <p className="fade-up fade-up-3 text-sm font-medium mt-3 mb-3" style={{ color: "#8B6B4A" }}>
           Singer-Songwriter · New York, NY
         </p>
-        <div className="fade-up fade-up-3 flex flex-col items-center gap-0.5 mb-3" style={{ color: "#a08060" }}>
+        <div className="fade-up fade-up-3 flex flex-col items-center gap-1.5 mb-5" style={{ color: "#a08060" }}>
           <a href="mailto:Michael.r.cantor@gmail.com" className="text-xs hover:opacity-70 transition-opacity">
             Michael.r.cantor@gmail.com
           </a>
