@@ -81,10 +81,6 @@ export default async function EPK() {
       <section id="bio" className="py-20 md:py-28 px-6 md:px-16 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-3">
-              "Nothing — I mean nothing — beats a great cheeseburger."
-            </h2>
-            <p className="text-base font-medium mb-8" style={{ color: "#a08060" }}>— Michael Cantor</p>
             <div className="w-12 h-px bg-[var(--accent)] mb-8" />
             <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden">
               <Image src="/bio-photo.jpg" alt="Michael Cantor" fill className="object-cover object-top" />
