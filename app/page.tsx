@@ -40,7 +40,7 @@ export default async function EPK() {
       />
 
       {/* Bio — top left, always visible */}
-      <div className="absolute z-10 max-w-[200px]" style={{ top: "38%", left: "22%" }}>
+      <div className="absolute z-10 max-w-[200px]" style={{ top: "50%", left: "22%", transform: "translateY(-50%)" }}>
         <p className="text-[11px] md:text-xs leading-relaxed drop-shadow-sm font-semibold" style={{ color: "#8B6B4A" }}>
           Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car on their drives back and forth from Yonkers, NY, where Michael was born. They would listen to ELO, Radiohead, and The Allman Brothers on repeat. Those were his earliest influences.
         </p>
