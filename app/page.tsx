@@ -81,7 +81,7 @@ export default async function EPK() {
               target="_blank"
               rel="noopener noreferrer"
               style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.55)" }}
-              className="px-6 py-2.5 rounded-full border text-xs font-semibold hover:opacity-80 transition whitespace-nowrap"
+              className="px-7 py-2.5 rounded-full border text-xs font-semibold hover:opacity-80 transition whitespace-nowrap"
             >
               {link.label}
             </a>

@@ -93,18 +93,18 @@ export default function EPKOverlay({ videos, accent }: Props) {
         style={{ bottom: "6%", left: "50%", transform: "translateX(-50%)" }}
       >
         {[
-          { label: "Spotify", href: "https://open.spotify.com/artist/2nyS5xoo0whI3q74gsRmHL", bg: "#1DB954", text: "#000" },
-          { label: "Apple Music", href: "https://music.apple.com/us/artist/michael-cantor/1631765548", bg: "#fc3c44", text: "#fff" },
-          { label: "YouTube Music", href: "https://youtube.com/channel/UCHLDDkR-qNPVgtFQFGk4aDw", bg: "#FF0000", text: "#fff" },
-          { label: "Tidal", href: "https://tidal.com/artist/32899611/u", bg: "#000", text: "#fff" },
+          { label: "Spotify", href: "https://open.spotify.com/artist/2nyS5xoo0whI3q74gsRmHL" },
+          { label: "Apple Music", href: "https://music.apple.com/us/artist/michael-cantor/1631765548" },
+          { label: "YouTube Music", href: "https://youtube.com/channel/UCHLDDkR-qNPVgtFQFGk4aDw" },
+          { label: "Tidal", href: "https://tidal.com/artist/32899611/u" },
         ].map((p) => (
           <a
             key={p.label}
             href={p.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 rounded-full text-xs font-semibold hover:opacity-85 transition whitespace-nowrap"
-            style={{ backgroundColor: p.bg, color: p.text }}
+            className="px-6 py-2.5 rounded-full border text-xs font-semibold hover:opacity-80 transition whitespace-nowrap"
+            style={{ borderColor: "#8B6B4A", color: "#8B6B4A", backgroundColor: "rgba(255,255,255,0.55)" }}
           >
             {p.label}
           </a>
