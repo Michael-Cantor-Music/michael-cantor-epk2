@@ -197,7 +197,7 @@ export default function EPKSections({ videos, accent }: Props) {
         <div className="space-y-4 text-[14px] leading-relaxed" style={{ color: "#8B6B4A" }}>
           <p>Michael Cantor is a New York City based singer/songwriter from Westport, CT. He fell in love with music in his dad's car on their drives back and forth from Yonkers, NY, where Michael was born. They would listen to ELO, Radiohead, and the Allman Brothers on repeat. Those were his earliest influences. He later fell in love with Stevie Ray Vaughan and became obsessed with the guitar.</p>
           <p>Years later, Michael found himself writing songs and starting to sing. He found that writing songs made him happy and decided to go to Berklee School of Music. There, his musical influences became songwriters like Bob Dylan, Leif Vollebekk, and John Mayer. Michael says he likes how a song feels in his hands. He knows if his hands are on the same page, he's onto a new song.</p>
-          <p>His debut single was released in 2023, and now he is very excited to be rolling out his debut album. It's a folk/pop record with some fusion sprinkled in. With each song, Michael says he's coming closer to hearing his true voice as an artist.</p>
+          <p>His debut single was released in 2023, and now he is very excited to be rolling out his debut album. It's a folk/pop record with some fusion sprinkled in.</p>
         </div>
       </CollapsibleSection>
 
@@ -212,7 +212,7 @@ export default function EPKSections({ videos, accent }: Props) {
       <div id="contact" /><CollapsibleSection title="Get in Touch" defaultOpen={false}>
         <div className="flex flex-col gap-3">
           <a
-            href="mailto:Michael.r.cantor@gmail.com"
+            href="mailto:mgmt@michaelcantor.com"
             className="group flex items-center gap-3 border border-[#D8D4CE] rounded-xl p-4 hover:border-[var(--accent)] transition-colors"
           >
             <div className="w-9 h-9 rounded-full bg-[#E8E4DE] flex items-center justify-center text-[var(--accent)] shrink-0">
@@ -222,7 +222,7 @@ export default function EPKSections({ videos, accent }: Props) {
             </div>
             <div className="min-w-0">
               <p className="text-[10px] uppercase tracking-widest mb-0.5" style={{ color: "#a08060" }}>Email</p>
-              <p className="text-sm font-semibold truncate group-hover:text-[var(--accent)] transition-colors">Michael.r.cantor@gmail.com</p>
+              <p className="text-sm font-semibold truncate group-hover:text-[var(--accent)] transition-colors">mgmt@michaelcantor.com</p>
             </div>
           </a>
           <a

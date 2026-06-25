@@ -61,7 +61,7 @@ export default async function EPK() {
           After years of obsessing over the guitar, Michael found himself writing songs and starting to sing. His musical influences became songwriters like Bob Dylan, Leif Vollebekk, and John Mayer.
         </p>
         <p className="text-[11px] md:text-xs leading-relaxed mt-2 drop-shadow-sm font-semibold" style={{ color: "#8B6B4A" }}>
-          His debut single was released in 2023, and now he is very excited to be rolling out his debut album. It's a folk/pop record with some fusion sprinkled in. With each song, Michael says he's coming closer to hearing his true voice as an artist.
+          His debut single was released in 2023, and now he is very excited to be rolling out his debut album. It's a folk/pop record with some fusion sprinkled in.
         </p>
       </div>
 
@@ -77,8 +77,8 @@ export default async function EPK() {
           Singer-Songwriter · New York, NY
         </p>
         <div className="fade-up fade-up-3 flex flex-col items-center" style={{ gap: "4px", marginBottom: "20px" }}>
-          <a href="mailto:Michael.r.cantor@gmail.com" className="text-xs font-bold hover:opacity-70 transition-opacity" style={{ color: "#a08060" }}>
-            Michael.r.cantor@gmail.com
+          <a href="mailto:mgmt@michaelcantor.com" className="text-xs font-bold hover:opacity-70 transition-opacity" style={{ color: "#a08060" }}>
+            mgmt@michaelcantor.com
           </a>
           <a href="tel:2032167905" className="text-xs font-bold hover:opacity-70 transition-opacity" style={{ color: "#a08060" }}>
             (203) 216-7905
