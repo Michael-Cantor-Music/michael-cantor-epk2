@@ -29,6 +29,7 @@ export default async function EPK() {
 { id: "xa861fVGf7w", title: "Lucinda's", url: "https://www.youtube.com/shorts/xa861fVGf7w" },
     { id: "hG1z4toi0Vg", title: "SoHo Playhouse", url: "https://www.youtube.com/shorts/hG1z4toi0Vg" },
     { id: "rj-BXD73hd0", title: "At Home", url: "https://www.youtube.com/shorts/rj-BXD73hd0" },
+    { id: "fTShiPkmKbc", title: "Bowery Palace", url: "https://youtu.be/fTShiPkmKbc" },
   ];
 
   return (
